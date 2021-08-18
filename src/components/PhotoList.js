@@ -48,7 +48,7 @@ class PhotoList extends Component {
                         return (
                             <li key={`${photo.id}`}>
                                 <p>Title: {photo.title}</p>
-                                <p><a href={photo.url}>Image</a></p>
+                                <p><a href={photo.url}>{photo.title}</a></p>
                             </li>
                         )
                     })}
