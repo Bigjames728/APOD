@@ -15,7 +15,7 @@ class PhotoList extends Component {
     }
 
     componentDidMount() {
-        const url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
+        const url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=5`;
         fetch(url)
             .then(res => res.json())
             .then(
@@ -43,14 +43,19 @@ class PhotoList extends Component {
         } else {
 
             return(
-                <div>
-                    {photos.url}
-                </div>
+                <ul>
+                    {photos.map((photo) => {
+                        return (
+                            <li key={`${photo.id}`}>
+                                <p>Title: {photo.title}</p>
+                                <p><a href={photo.url}>Image</a></p>
+                            </li>
+                        )
+                    })}
+                </ul>
             )
         }    
     }
-
-
 
 }
 
