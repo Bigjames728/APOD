@@ -9,11 +9,10 @@ function PhotoList() {
     const [photos, setPhotos] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     
-
-    
     useEffect( () => {
         fetchData();
     }, []);
+
     console.log(photos);
 
     const fetchData = () => {
