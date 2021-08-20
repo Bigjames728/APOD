@@ -21,6 +21,7 @@ body {
 }
 
 .button {
+    cursor: pointer;
     background-color: royalblue;
     color: white;
     margin-top: 37px;
