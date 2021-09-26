@@ -21,6 +21,7 @@ function PhotoList() {
             .then(response => response.json())
             .then((photos) => {
                 setPhotos(photos);
+                console.log(typeof photos);
                 setIsLoading(false);
             })
             .catch(error => console.log('Error fetching and parsing data', error))
